@@ -1,0 +1,1040 @@
+/* =========== Google Fonts ============ */
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap");
+
+/* =============== Globals ============== */
+* {
+  font-family: "Ubuntu", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --blue: #2a2185;
+  --white: #fff;
+  --gray: #f5f5f5;
+  --black1: #222;
+  --black2: #999;
+}
+
+body {
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+.container {
+  position: relative;
+  width: 100%;
+}
+
+/* =============== Navigation ================ */
+.navigation {
+  position: fixed;
+  width: 300px;
+  height: 100%;
+  background: var(--blue);
+  border-left: 10px solid var(--blue);
+  transition: 0.5s;
+  overflow: hidden;
+}
+.navigation.active {
+  width: 80px;
+}
+
+.navigation ul {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+.navigation ul li {
+  position: relative;
+  width: 100%;
+  list-style: none;
+  border-top-left-radius: 30px;
+  border-bottom-left-radius: 30px;
+}
+
+.navigation ul li:hover,
+.navigation ul li.hovered {
+  background-color: var(--white);
+}
+
+.navigation ul li:nth-child(1) {
+  margin-bottom: 40px;
+  pointer-events: none;
+}
+
+.navigation ul li a {
+  position: relative;
+  display: block;
+  width: 100%;
+  display: flex;
+  text-decoration: none;
+  color: var(--white);
+}
+.navigation ul li:hover a,
+.navigation ul li.hovered a {
+  color: var(--blue);
+}
+
+.navigation ul li a .icon {
+  position: relative;
+  display: block;
+  min-width: 60px;
+  height: 60px;
+  line-height: 75px;
+  text-align: center;
+}
+.navigation ul li a .icon ion-icon {
+  font-size: 1.75rem;
+}
+
+.navigation ul li a .title {
+  position: relative;
+  display: block;
+  padding: 0 10px;
+  height: 60px;
+  line-height: 60px;
+  text-align: start;
+  white-space: nowrap;
+}
+
+.navigation ul li a .icon img{
+  position: relative;
+  gap: 4rem;
+  top: 5px;
+  left: 10px;
+  width: 50px;
+  height: 50px;
+}
+
+.title1 {
+   position: relative;
+   top: 30px;
+   left: 0px;
+   font-weight: bold;
+   font-family: "Times New Roman", Times, serif;
+   font-size: 30px;
+}
+
+/* --------- curve outside ---------- */
+.navigation ul li:hover a::before,
+.navigation ul li.hovered a::before {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: -50px;
+  width: 50px;
+  height: 50px;
+  background-color: transparent;
+  border-radius: 50%;
+  box-shadow: 35px 35px 0 10px var(--white);
+  pointer-events: none;
+}
+.navigation ul li:hover a::after,
+.navigation ul li.hovered a::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  bottom: -50px;
+  width: 50px;
+  height: 50px;
+  background-color: transparent;
+  border-radius: 50%;
+  box-shadow: 35px -35px 0 10px var(--white);
+  pointer-events: none;
+}
+
+
+
+/* ===================== Main ===================== */
+.main {
+  position: absolute;
+  width: calc(100% - 300px);
+  left: 300px;
+  min-height: 100vh;
+  background: var(--gray);
+  transition: 0.5s;
+}
+.main.active {
+  width: calc(100% - 80px);
+  left: 80px;
+}
+
+.topbar {
+  width: 100%;
+  height: 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 10px;
+}
+
+.toggle {
+  position: relative;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2.5rem;
+  cursor: pointer;
+}
+
+.user {
+  position: relative;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.user img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.datetime {
+    position: relative;
+    left: 280px;
+}
+
+
+
+/* ===================== Notifications ===================== */
+
+*{
+	padding: 0px;
+	margin: 0px;
+}
+body {
+	font-family: sans-serif;
+}
+nav {
+	display: flex;
+	align-items: center;
+	height: 60px;
+	position: relative;
+	left: 500px;
+}
+.icon {
+	cursor: pointer;
+	margin-right: 50px;
+	line-height: 60px;
+}
+.icon span {
+	background: #f00;
+	padding: 7px;
+	border-radius: 50%;
+	color: #fff;
+	vertical-align: top;
+	margin-left: -20px;
+}
+.icon img {
+	display: inline-block;
+	width: 40px;
+	margin-top: 20px;
+}
+.icon:hover {
+	opacity: .7;
+}
+
+.logo {
+	flex: 1;
+	margin-left: 50px;
+	color: #eee;
+	font-size: 20px;
+	font-family: monospace;
+}
+
+.iconn {
+	cursor: pointer;
+	position: relative;
+	left: 460px;
+	top: 5px;
+	margin-right: 50px;
+	line-height: 60px;
+}
+.iconn span {
+	background: #f00;
+	padding: 7px;
+	border-radius: 50%;
+	color: #fff;
+	vertical-align: top;
+	margin-left: -20px;
+}
+.iconn img {
+	display: inline-block;
+	width: 40px;
+	margin-top: 20px;
+}
+.iconn:hover {
+	opacity: .7;
+}
+
+.notifi-box {
+    width: 300px;
+    height: 0px;
+    opacity: 0;
+    position: absolute;
+    top: 63px;
+    right: 35px;
+    transition: height 0.25s ease, opacity 0.25s ease;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    background-color: white;  /* Add background to distinguish it */
+    z-index: 999;  /* Ensure it appears on top */
+    overflow: hidden;  /* Prevent content overflow when hidden */
+}
+
+.notifi-box h2 {
+	font-size: 14px;
+	padding: 10px;
+	border-bottom: 1px solid #eee;
+	color: #999;
+}
+.notifi-box h2 span {
+	color: #f00;
+}
+.notifi-item {
+	display: flex;
+	border-bottom: 1px solid #eee;
+	padding: 15px 5px;
+	margin-bottom: 15px;
+	cursor: pointer;
+}
+.notifi-item:hover {
+	background-color: #eee;
+}
+.notifi-item img {
+	display: block;
+	width: 50px;
+	margin-right: 10px;
+	border-radius: 50%;
+}
+.notifi-item .text h4 {
+	color: #777;
+	font-size: 16px;
+	margin-top: 10px;
+}
+.notifi-item .text p {
+	color: #aaa;
+	font-size: 12px;
+}
+
+.Notifications {
+    position: relative;
+}
+
+.Notifications h1 {
+
+    position: relative;
+    text-align: center;
+    top: 100px;
+    left: 150px;
+
+
+}
+
+
+/* ===================== Notifications Table ===================== */
+.NotifTable {
+  position: relative;
+  margin: 20px; /* Add margin around the table */
+
+}
+.NotifTable table {
+    position: relative;
+    top: 150px;
+    left: 350px;
+    width: 80%; /* Adjust the width of the table as needed */
+    border-collapse: collapse; /* Collapse table borders */
+    margin: 20px; /* Add margin for better spacing */
+}
+.NotifTable th, .NotifTable td {
+    padding: 12px;
+    text-align: center;
+    border: 5px solid #080707; /* Add border to cells */
+}
+.NotifTable th {
+    background-color: #f2f2f2; /* Light gray background for header */
+}
+/* Optional: Add hover effect for better user experience */
+.NotifTable tr:hover {
+    background-color: #f5f5f5;
+}
+
+/* ===================== Sanitization ===================== */
+
+.status1 {
+ position: relative;
+
+}
+.status1 h1 {
+ position: relative;
+ text-align: center;
+
+}
+
+.cBox {
+  position: relative;
+  width: 100%;
+  padding: 50px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 20px;
+}
+
+.cBox .cd {
+  position: relative;
+  background: var(--white);
+  padding: 30px;
+  border-radius: 20px;
+  display: flex;
+  justify-content: space-between;
+  cursor: pointer;
+  box-shadow: 0 7px 25px rgba(0, 0, 0, 0.08);
+}
+
+.cBox .cd .num {
+  position: relative;
+  font-weight: 500;
+  font-size: 2.5rem;
+  color: var(--blue);
+}
+
+.cBox .cd .cName {
+  color: var(--black2);
+  font-size: 1.1rem;
+  margin-top: 20px;
+}
+
+.cBox .cd .icBx {
+  font-size: 3.5rem;
+  color: var(--black2);
+}
+
+.cBox img {
+  width: 120px;
+  height: 60px;
+}
+
+.cBox .cd:hover {
+  background: var(--blue);
+}
+.cBox .cd:hover .num,
+.cBox .cd:hover .cName,
+.cBox .cd:hover .icBx {
+  color: var(--white);
+}
+
+.cBox1 {
+  position: relative;
+  width: 100%;
+  padding: 50px;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr); /* Single column */
+  grid-gap: 20px;
+  justify-items: center;  /* Centers items horizontally */
+  align-items: center;    /* Centers items vertically */
+}
+
+.cBox1 .cd {
+  position: relative;
+  background: var(--white);
+  width: 40%;
+  padding: 30px;
+  border-radius: 20px;
+  display: flex;
+  justify-content: space-between;
+  cursor: pointer;
+  box-shadow: 0 7px 25px rgba(0, 0, 0, 0.08);
+}
+
+.cBox1 .cd .num {
+  position: relative;
+  font-weight: 500;
+  font-size: 2.5rem;
+  color: var(--blue);
+}
+
+.cBox1 .cd .cName {
+  color: var(--black2);
+  font-size: 1.1rem;
+  margin-top: 20px;
+}
+
+.cBox1 .cd .icBx {
+  font-size: 3.5rem;
+  color: var(--black2);
+}
+
+.cBox1 img {
+  width: 120px;
+  height: 80px;
+}
+
+.cBox1 .cd:hover {
+  background: var(--blue);
+}
+.cBox1 .cd:hover .num,
+.cBox1 .cd:hover .cName,
+.cBox1 .cd:hover .icBx {
+  color: var(--white);
+}
+
+
+
+/* ===================== Sanitization Table ===================== */
+
+.SanitizationTable {
+  position: relative;
+  margin: 10px; /* Add margin around the table */
+
+}
+.SanitizationTable table {
+    position: relative;
+    top: 100px;
+    left: 200px;
+    width: 80%; /* Adjust the width of the table as needed */
+    border-collapse: collapse; /* Collapse table borders */
+    margin: 10px; /* Add margin for better spacing */
+}
+.SanitizationTable th, .SanitizationTable td {
+    padding: 12px;
+    text-align: center;
+    border: 5px solid #080707; /* Add border to cells */
+}
+.SanitizationTable th {
+    background-color: #f2f2f2; /* Light gray background for header */
+}
+/* Optional: Add hover effect for better user experience */
+.SanitizationTable tr:hover {
+    background-color: #f5f5f5;
+}
+
+
+
+
+/* ===================== Growth Camera ===================== */
+
+#eggCounts {
+            display: flex;
+            position: relative;
+            justify-content: space-between;
+            padding: 50px;
+            left: 200px;
+        }
+
+#hatchedCount,
+#unhatchedCount {
+    color: white;
+    background-color: #4285f4;
+    padding: 20px;
+    border-radius: 5px;
+    margin: 5px;
+    font-size: 20px;
+    font-family: "Roboto", sans-serif;
+    font-weight: bold;
+    text-align: center;
+    flex: 1;
+}
+
+.growthCamera h1 {
+  position: relative;
+  text-align: center;
+  left: 180px;
+}
+
+.growthCamera {
+  position: relative;
+  width: calc(100% - 300px); /* Adjust based on navigation width */
+  transition: width 0.5s ease; /* Smooth transition */
+}
+
+.growthCamera img {
+  position: relative;
+  top: 25px;
+  width: 100%; /* Ensure the image is flexible in width */
+  height: 600px; /* Maintain aspect ratio */
+  max-width: 100%; /* Ensure image does not overflow */
+  left: 170px;
+}
+
+/* ===================== RD GC2 ========================== */
+@media (max-width: 991px) {
+  .growthCamera {
+    width: calc(100% - 80px); /* Adjust based on navigation width when active */
+  }
+}
+
+@media (max-width: 768px) {
+  .growthCamera {
+    width: 100%; /* Full width for smaller screens */
+  }
+}
+
+/* Ensuring proper positioning and size when navigation is active */
+.navigation.active ~ .growthCamera {
+  width: calc(100% - 80px); /* Adjust based on navigation width when active */
+}
+
+/* ===================== Growth Table ===================== */
+.growthTable {
+  position: relative;
+  margin: 20px; /* Add margin around the table */
+
+}
+.growthTable table {
+    position: relative;
+    top: 65px;
+    left: 160px;
+    width: 80%; /* Adjust the width of the table as needed */
+    border-collapse: collapse; /* Collapse table borders */
+    margin: 20px; /* Add margin for better spacing */
+}
+.growthTable th, .growthTable td {
+    padding: 12px;
+    text-align: center;
+    border: 1px solid #ddd; /* Add border to cells */
+}
+.growthTable th {
+    background-color: #f2f2f2; /* Light gray background for header */
+}
+/* Optional: Add hover effect for better user experience */
+.growthTable tr:hover {
+    background-color: #f5f5f5;
+}
+
+/* ===================== Feeding Schedule ===================== */
+.schedule {
+  position: relative;
+
+}
+.schedule h1 {
+    position: relative;
+    text-align: center;
+
+}
+
+.col-div-4-1{
+  position: relative;
+  top: 50px;
+  left: 50px;
+  width: 50%;
+  float: left;
+}
+
+.head-1{
+  font-size: 18px!important;
+  margin: 10px 0px;
+      color: #000000;
+}
+.head-1 span{
+    float: right;
+    background-color: #5643ff;
+    color: white;
+    padding: 3px 10px;
+    font-size: 15px;
+}
+
+.box-1{
+  width: 88%;
+  height: 282px;
+  background-color: #ffffff;
+  margin-left: 10px;
+  padding:10px;
+  box-shadow: 2px 5px 10px #ddd;
+  position: relative;
+}
+
+.content-box-1{
+  padding: 0px 10px;
+}
+
+
+.col-div-4{
+	width: 30%;
+	float: left;
+}
+
+/*-----------------Gauge Water-------------------*/
+
+.circle-wrap {
+  margin: 50px auto;
+  width: 150px;
+  height: 150px;
+  background: #e6e2e7;
+  border-radius: 50%;
+}
+.circle-wrap .circle .mask,
+.circle-wrap .circle .fill {
+  width: 150px;
+  height: 150px;
+  position: absolute;
+  border-radius: 50%;
+}
+.circle-wrap .circle .mask {
+  clip: rect(0px, 150px, 150px, 75px);
+}
+
+.circle-wrap .circle .mask .fill {
+  clip: rect(0px, 75px, 150px, 0px);
+  background-color: #5646ff;
+}
+.circle-wrap .circle .mask.full,
+.circle-wrap .circle .fill {
+  animation: fill ease-in-out 3s;
+  transform: rotate(126deg);
+}
+
+@keyframes fill {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(126deg);
+  }
+}
+.circle-wrap .inside-circle {
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+  background: #fff;
+  line-height: 130px;
+  text-align: center;
+  margin-top: 10px;
+  margin-left: 10px;
+  position: absolute;
+  z-index: 100;
+  font-weight: 700;
+  font-size: 2em;
+  color: #6c7293;
+}
+
+/*-----------------Gauge Food-------------------*/
+
+.circle-wrap-1 {
+  margin: 50px auto;
+  width: 150px;
+  height: 150px;
+  background: #e6e2e7;
+  border-radius: 50%;
+}
+.circle-wrap-1 .circle-1 .mask,
+.circle-wrap-1 .circle-1 .fill-1 {
+  width: 150px;
+  height: 150px;
+  position: absolute;
+  border-radius: 50%;
+}
+.circle-wrap-1 .circle-1 .mask {
+  clip: rect(0px, 150px, 150px, 75px);
+}
+
+.circle-wrap-1 .circle-1 .mask .fill-1 {
+  clip: rect(0px, 75px, 150px, 0px);
+  background-color: #5646ff;
+}
+.circle-wrap-1 .circle-1 .mask.full-1,
+.circle-wrap-1 .circle-1 .fill-1 {
+  animation: fill-1 ease-in-out 3s;
+  transform: rotate(144deg);
+}
+
+@keyframes fill-1 {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(144deg);
+  }
+}
+.circle-wrap-1 .inside-circle-1 {
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+  background: #fff;
+  line-height: 130px;
+  text-align: center;
+  margin-top: 10px;
+  margin-left: 10px;
+  position: absolute;
+  z-index: 100;
+  font-weight: 700;
+  font-size: 2em;
+  color: #6c7293;
+}
+
+
+.schedule-form {
+   position: relative;
+   top: 200px;
+
+}
+
+
+.tableSched .meal-table {
+    position: relative;
+    top:  100px;
+    left: 225px;
+    width: 80%;
+    border-collapse: collapse;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.tableSched .meal-table th,
+.tableSched .meal-table td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: left;
+}
+
+.tableSched .meal-table th {
+    background-color: #3498db;
+    color: white;
+}
+
+.tableSched .meal-table tbody tr:hover {
+    background-color: #ecf0f1;
+}
+
+/* ======================= Environment ====================== */
+.status {
+ position: relative;
+
+}
+.status h1 {
+ position: relative;
+ text-align: center;
+
+}
+.cardBox {
+  position: relative;
+  width: 100%;
+  padding: 20px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 20px;
+}
+
+.cardBox .card {
+  position: relative;
+  background: var(--white);
+  padding: 30px;
+  border-radius: 20px;
+  display: flex;
+  justify-content: space-between;
+  cursor: pointer;
+  box-shadow: 0 7px 25px rgba(0, 0, 0, 0.08);
+}
+
+.cardBox .card .numbers {
+  position: relative;
+  font-weight: 500;
+  font-size: 2.5rem;
+  color: var(--blue);
+}
+
+.cardBox .card .cardName {
+  color: var(--black2);
+  font-size: 1.1rem;
+  margin-top: 5px;
+}
+
+.cardBox .card .iconBx {
+  font-size: 3.5rem;
+  color: var(--black2);
+}
+
+.cardBox img {
+  width: 60px;
+  height: 60px;
+}
+
+.cardBox .card:hover {
+  background: var(--blue);
+}
+.cardBox .card:hover .numbers,
+.cardBox .card:hover .cardName,
+.cardBox .card:hover .iconBx {
+  color: var(--white);
+}
+
+.cardBox1 {
+  position: relative;
+  width: 100%;
+  padding: 20px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 20px;
+}
+
+.cardBox1 .card {
+  position: relative;
+  background: var(--white);
+  padding: 30px;
+  border-radius: 20px;
+  display: flex;
+  justify-content: space-between;
+  cursor: pointer;
+  box-shadow: 0 7px 25px rgba(0, 0, 0, 0.08);
+}
+
+.cardBox1 .card .numbers {
+  position: relative;
+  font-weight: 500;
+  font-size: 2.5rem;
+  color: var(--blue);
+}
+
+.cardBox1 .card .cardName {
+  color: var(--black2);
+  font-size: 1.1rem;
+  margin-top: 5px;
+}
+
+.cardBox1 .card .iconBx {
+  font-size: 3.5rem;
+  color: var(--black2);
+}
+
+.cardBox1 img {
+  width: 60px;
+  height: 60px;
+}
+
+.cardBox1 .card:hover {
+  background: var(--blue);
+}
+.cardBox1 .card:hover .numbers,
+.cardBox1 .card:hover .cardName,
+.cardBox1 .card:hover .iconBx {
+  color: var(--white);
+}
+
+/* ===================== Environment Table ===================== */
+.EnviTable {
+  position: relative;
+  margin: 20px; /* Add margin around the table */
+
+}
+.EnviTable table {
+    position: relative;
+    top: 20px;
+    left: 160px;
+    width: 80%; /* Adjust the width of the table as needed */
+    border-collapse: collapse; /* Collapse table borders */
+    margin: 20px; /* Add margin for better spacing */
+}
+.EnviTable th, .EnviTable td {
+    padding: 12px;
+    text-align: center;
+    border: 1px solid #ddd; /* Add border to cells */
+}
+.EnviTable th {
+    background-color: #f2f2f2; /* Light gray background for header */
+}
+/* Optional: Add hover effect for better user experience */
+.EnviTable tr:hover {
+    background-color: #f5f5f5;
+}
+
+/* ===================== Environment Charts ===================== */
+
+.charts {
+
+    width: 100%;
+    height: auto; /* Set height to auto to accommodate varying chart heights */
+    padding: 20px;
+    padding-top: 0;
+
+}
+
+.chart {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 7px 25px rgba(0, 0, 0, 0.08);
+    width: 100%;
+    border: 0px solid #000;
+}
+
+.chart h2 {
+    margin-bottom: 5px;
+    font-size: 20px;
+    color: #666;
+    text-align: center
+}
+
+
+/* ====================== Responsive Design ========================== */
+@media (max-width: 991px) {
+  .navigation {
+    left: -300px;
+  }
+  .navigation.active {
+    width: 300px;
+    left: 0;
+  }
+  .main {
+    width: 100%;
+    left: 0;
+  }
+  .main.active {
+    left: 300px;
+  }
+  .cardBox {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .details {
+    grid-template-columns: 1fr;
+  }
+  .recentOrders {
+    overflow-x: auto;
+  }
+  .status.inProgress {
+    white-space: nowrap;
+  }
+}
+
+@media (max-width: 480px) {
+  .cardBox {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .cardHeader h2 {
+    font-size: 20px;
+  }
+  .user {
+    min-width: 40px;
+  }
+  .navigation {
+    width: 100%;
+    left: -100%;
+    z-index: 1000;
+  }
+  .navigation.active {
+    width: 100%;
+    left: 0;
+  }
+  .toggle {
+    z-index: 10001;
+  }
+  .main.active .toggle {
+    color: #fff;
+    position: fixed;
+    right: 0;
+    left: initial;
+  }
+}
